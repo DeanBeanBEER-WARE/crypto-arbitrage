@@ -1,0 +1,29 @@
+# Exchange configuration
+exchanges:
+  - name: "binance"
+    enabled: true
+  - name: "kraken"
+    enabled: true
+  - name: "coinbase"
+    enabled: true
+
+# Trading pairs configuration
+trading_pairs:
+  - "BTC/USDT"
+  - "ETH/USDT"
+
+# Arbitrage parameters
+min_profit_percent: 0.5  # Minimum profit percentage to execute trade
+trade_amount: 0.01  # Amount in base currency
+max_simultaneous_trades: 3
+stop_loss_percent: 2.0
+polling_interval_ms: 500  # Polling interval in milliseconds
+
+# Risk management
+max_trade_amount_per_pair: 0.1  # Maximum amount per trading pair
+daily_loss_limit_percent: 5.0  # Daily loss limit in percentage
+
+# Logging configuration
+logging:
+  level: "INFO"
+  file: "arbitrage.log"
